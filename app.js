@@ -3,7 +3,7 @@
 
     angular.module('NameCalculator', [])
 
-    .controller('NAmeCalculatorController', function ($scope) {
+    .controller('NameCalculatorController', function ($scope) {
         $scope.name = "";
         $scope.totalValue = 0;
 
@@ -18,7 +18,8 @@
             for(var i=0; i < string.length; i++) {
                 totalStringValue += string.charCodeAt(i);
             }
-        return totalStringValue;
+            return totalStringValue;
         }
+        
     });
 })();
