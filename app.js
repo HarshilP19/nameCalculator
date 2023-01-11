@@ -10,7 +10,7 @@
         $scope.displayNumeric = function(){
             var totalNameValue = 
             calculatorNumericForString($scope.name);
-            $scope.totalNameValue = totalNameValue;
+            $scope.totalValue = totalNameValue;
         };
 
         function calculatorNumericForString(string) {
