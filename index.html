@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/angular.min.js"></script>
-    <script src="/app.js"></script>
+<!--     <script src="/angular.min.js"></script>
+    <script src="/app.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        (function (){
+    'use strict';
+
+    angular.module('NameCalculator', [])
+
+    .controller('NameCalculatorController', function ($scope) {
+        $scope.name = "";
+        $scope.totalValue = 0;
+
+        $scope.displayNumeric = function(){
+            var totalNameValue = 
+            calculatorNumericForString($scope.name);
+            $scope.totalValue = totalNameValue;
+        };
+
+        function calculatorNumericForString(string) {
+            var totalStringValue = 0;
+            for(var i=0; i < string.length; i++) {
+                totalStringValue += string.charCodeAt(i);
+            }
+            return totalStringValue;
+        }
+        
+    });
+})();
+    </script>
+    
+    
+    
     <title>Angular</title>
 </head>
 <body ng-app="NameCalculator">
